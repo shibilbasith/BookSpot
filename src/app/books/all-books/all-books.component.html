@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+  <div class=" container mt-5 pt-5">
+      <div class="row feature-card-body">
+          <div class="col-lg-3 mb-5" *ngFor="let book of allbooks | filter: searchterm : 'title' ">
+              <div class="card feature-card" >
+                  <div class="img-div"><img class="card-img-top" [src]="book.image" alt="Card image cap"></div>
+                  <div class="card-body d-flex justify-content-between">
+                      <div>
+                          <!-- <h5 class="card-title mb-0">{{book.title.slice(0,10)+'...'}} -->
+                          <h5 class="card-title mb-0">{{((book.title.length > 10) ? book.title.slice(0,9)+'...' : book.title)}}
+                            
+                          </h5>
+                          <p class="card-text mb-5 price">{{ book.price | currency}}</p>
+                      </div>
+                      <span>
+                      <button (click)="addtowishlist(book)" class="add-wish me-2"><i class="fa fa-heart fa-lg"></i></button>
+                      <button (click)="addtocart(book)" class="add-cart">Buy</button>
+                    </span>
+                  </div>
+              </div>
+          </div>
+         
+          
+
+      </div>
+
+  </div>
+

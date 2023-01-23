@@ -1,0 +1,73 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+img{
+    height: 100%;
+    width: 100%;
+    
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.img-div{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    height: 20rem;
+    width: 16rem;
+
+}
+
+.feature{
+    background-color: white;
+}
+
+.feature-card{
+    background-color: #eeeeee;
+    border-radius: 0;
+    width: 17rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card-body{
+    background-color: white;
+    height: 60px;
+    padding: 0 30px;
+    padding-top: 6px;
+}
+
+.add-cart{
+    border: none;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 4px #ff6b00;
+    height: 18px;
+    width: 50px;
+    margin-top: 10px;
+    padding-bottom: 28px;
+    
+}
+
+.add-cart:active {
+    box-shadow: 0 0;
+    transform: translateX(3px) translateY(4px) ;
+  }
+
+  .delete{
+    background: transparent;
+    border: none;
+ 
+  }
+
+  .download:hover{
+    color: green;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
+
+
+

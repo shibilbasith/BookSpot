@@ -1,0 +1,296 @@
+<!-- Home  -->
+
+<section class="home border-box d-flex align-items-center min-vh-100">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-5 home-head">
+                <h1>Discover the <br> Book Treasure</h1>
+                <p style="font-family: 'Roboto Mono', monospace;" class="mb-4">The most appropriate book site to reach books most <br> appropriate book site to reach books</p>
+                <button>Explore Now</button>
+            </div>
+            <div class="col-lg-7">
+                <img class="img-cover" src="https://i.postimg.cc/sXgm8KL1/new.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<!-- Featured Books  -->
+
+<section class="feature pb-5">
+    <p class="text-center pt-5 ">SOME QUALITY ITEMS</p>
+    <h1 class="text-center">Featured Books</h1>
+    <div class=" container mt-5 pt-5">
+        <div class="row feature-card-body mt-5">
+            <div class="col-lg-3 mb-5" *ngFor="let book of featuredbooks">
+                <div class="card feature-card" >
+                    <div class="img-div"><img class="card-img-top" [src]="book.image" alt="Card image cap"></div>
+                    <div class="card-body d-flex justify-content-between">
+                        <div>
+                            <!-- <h5 class="card-title mb-0">{{book.title.slice(0,10)+'...'}} -->
+                            <h5 class="card-title mb-0">{{((book.title.length > 10) ? book.title.slice(0,9)+'...' : book.title)}}
+                              
+                            </h5>
+                            <p class="card-text mb-5 price">{{ book.price | currency}}</p>
+                        </div>
+                        <span>
+                        <button (click)="addtocart(book)" class="add-cart">Buy</button>
+                      </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end" style="margin-right: 40px;"><a  style="text-decoration: none; color: rgb(122, 122, 122); " routerLink="books/all-books">View All Books -></a></div>
+
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mb-5 mt-5">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+
+
+
+
+</section>
+
+
+<!-- Best Selling  -->
+
+
+<section class="selling d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="sell-img">
+                    <img src="https://i.postimg.cc/V6pymbvQ/Vectary-texture.png" alt="">
+
+                </div>
+            </div>
+            <div class="col-lg-6 sell-content">
+                <h1 style="font-family: 'Roboto Mono', monospace;">Best Selling Books</h1>
+                <p class="mt-5">BY DANIEL KAHNEMAN</p>
+                <h2 >Thinking Fast and Slow</h2>
+                <p style="font-family: 'Roboto Mono', monospace;">The book's main thesis is that of a dichotomy between two modes of thought: "System 1" is fast, instinctive and emotional; "System 2" is slower, more deliberative, and more logical.</p>
+                <p>$49.00</p>
+                <a style="text-decoration: none; color: rgb(122, 122, 122);" routerLink="books/all-books">View All Books -></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Popular Books -->
+
+<section class="popular " style="padding-bottom: 130px;">
+    <h1 class="text-center pt-5" style="font-family: 'Roboto Mono', monospace;">Popular Books</h1>
+    <div class=" container mt-5 pt-5 ">
+        <div class="row feature-card-body mt-5">
+            <div class="col-lg-4 mb-5 d-flex justify-content-center align-items-center" *ngFor="let book of popularbooks">
+                <div class="card feature-card" >
+                    <div class="img-div"><img class="card-img-top" [src]="book.image" alt="Card image cap"></div>
+                    <div class="card-body d-flex justify-content-between">
+                        <div>
+                            <!-- <h5 class="card-title mb-0">{{book.title.slice(0,10)+'...'}} -->
+                            <h5 class="card-title mb-0">{{((book.title.length > 10) ? book.title.slice(0,9)+'...' : book.title)}}
+                              
+                            </h5>
+                            <p class="card-text mb-5 price">{{ book.price | currency}}</p>
+                        </div>
+                        <span>
+                        <button (click)="addtocart(book)" class="add-cart">Buy</button>
+                      </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end" style="margin-right: 80px;"><a style="text-decoration: none; color: rgb(122, 122, 122); " routerLink="books/all-books">View All Books -></a></div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Subscribe  -->
+
+<section class="subscribe d-flex justify-content-center align-items-center min-vh-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 style="font-family: 'Roboto Mono', monospace; color: #4c4c4c;" class="sub-title">Subscribe To <br> Our Newsletter</h2>
+            </div>
+            <div class="col-lg-6 sub-content">
+                <p style="font-family: 'Roboto Mono', monospace;">Join our newsletter, so that we reach out to you
+                    with our best news and offers.</p>
+                <input type="text" placeholder="Enter Your Email Here">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Download App  -->
+
+<!-- <section class="download d-flex justify-content-around align-items-center min-vh-100">
+    <div class="container ">
+        <div class="row  ">
+            <div class="col-lg-6" style="margin-left: 0rem;">
+                <div class="download-img">
+                    <img style="width: 100%; height: 100%;" src="https://i.postimg.cc/k5YQBRpT/mobile-mockup.png" alt="">
+
+                </div>
+            </div>
+            <div class="col-lg-6 download-content">
+                
+                <h2>Download Our App Now!</h2>
+                <p>Download our app now and experience the convenience of having all your needs met at the touch of a button. Stay updated with the latest features and enjoy exclusive offers only available on our app. Download now and never miss a thing!</p>
+                <button class="g-play"><i class="bi bi-google-play me-2"></i>Google Play</button>
+                <button class="ios"><i class="bi bi-apple me-2"></i>App Store</button>
+                
+            
+            </div>
+        </div>
+        </div>
+</section> -->
+
+
+<section class="download d-flex justify-content-center align-items-center min-vh-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 download-img">
+                <img style="width: 100%; height: 100%;" src="https://i.postimg.cc/5NVyJN2T/mobile-mockup.png" alt="">
+            </div>
+            <div class="col-lg-6  download-content">
+                <h2 style="font-family: 'Roboto Mono', monospace;">Download Our App Now!</h2>
+                <p style="font-family: 'Roboto Mono', monospace;">Download our app now and experience the convenience of having all your needs met at the touch of a button. Stay updated with the latest features and enjoy exclusive offers only available on our app. Download now and never miss a thing!</p>
+                <button class="g-play"><i class="bi bi-google-play me-2"></i>Google Play</button>
+                <button class="ios"><i class="bi bi-apple me-2"></i>App Store</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer  -->
+
+<footer>
+    <div class="footer d-flex bg-light justify-content-center align-items-center">
+        <div class="container row">
+            <div class="col-lg-4">
+                <h1><b>BookSpot.</b> </h1>
+            </div>
+            <div class="col-lg-2">
+                <h6>About Us</h6>
+                <ul class="list">
+                    <li><a href=""> VISION</a></li>
+                    <li><a href=""> ARTICLES</a></li>
+                    <li><a href=""> CAREERS</a></li>
+                    <li><a href=""> SERVICE TERMS</a></li>
+                    <li><a href=""> DONATE</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h6>Discover</h6>
+                <ul class="list">
+                    <li><a href=""> HOME</a></li>
+                    <li><a href=""> BOOKS</a></li>
+                    <li><a href=""> AUTHORS</a></li>
+                    <li><a href=""> SUBJECTS</a></li>
+                    <li><a href=""> ADVANCED SEARCH</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h6>My Account</h6>
+                <ul class="list">
+                    <li><a href=""> SIGN IN</a></li>
+                    <li><a href=""> VIEW CART</a></li>
+                    <li><a href=""> MY WISHLIST</a></li>
+                    <li><a href=""> TRACK MY ORDER</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h6>Help </h6>
+                <ul class="list">
+                    <li><a href=""> HELP CENTER</a></li>
+                    <li><a href=""> REPORT A PROBLEM</a></li>
+                    <li><a href=""> SUGGESTING EDITS</a></li>
+                    <li><a href=""> CONTACT US</a></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="d-flex justify-content-between align-items-center">
+    <div class="mt-3"><p>Copyright &copy;2023 Bookspot, All rights reserved.</p></div>
+    <div class=" pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <!-- Github -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+
+
+    
+    </div>
+
+        </div>
+    </div>
+    
+</footer>

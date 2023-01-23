@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,800&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+.bookspot{
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-head {
+    background-color: #e5e5e5;
+}
+
+/* .search{
+    border: none;
+    width: 200px;
+    margin-left: 470px;
+    border-bottom: 2px solid;
+    border-radius: 0;
+    padding-bottom: 0;
+    margin-top: 11px;
+    background-color: transparent;
+
+} */
+
+.search:focus {
+    outline: none;
+    
+}
+
+/* .button-search{
+    border: none;
+    background:none;
+    border-bottom: 2px solid;
+    margin-bottom: 2px;
+    padding-top: 10px;
+
+} */
+
+.input-field {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 120px;
+    transition: all 0.5s;
+}
+
+.input-field:focus {
+    width: 200px;
+  }
+
+
+
+.cart {
+    border-radius: 4px;
+    padding-right: 35px;
+    width: 40px;
+    height: 40px;
+}
+
+.wish-btn {
+    border-radius: 4px;
+    padding-right: 35px;
+    width: 40px;
+    height: 40px;
+    padding-right: 38px;
+    background-color: transparent;
+}

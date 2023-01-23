@@ -1,0 +1,72 @@
+<section class="h-100 h-custom" style="background-color: #eee;">
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100" >
+      <div class="col d-flex justify-content-center align-items-center" >
+        <div class="card shopping-cart" style="border-radius: 15px;width: 50rem;">
+          <div class="card-body text-black" >
+
+            <div class="row">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8 px-4 py-4">
+
+                <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
+
+                <form class="mb-5">
+
+                  <div class="form-outline mb-5">
+                    <label class="form-label" for="typeText">Card Number</label>
+                    <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                      placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                  </div>
+
+                  <div class="form-outline mb-5">
+                    <label class="form-label" for="typeName">Name on card</label>
+                    <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                      placeholder="John Smith" />
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-5">
+                      <div class="form-outline">
+                        <label class="form-label" for="typeExp">Expiration</label>
+                        <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="01/22"
+                          size="7" id="exp" minlength="7" maxlength="7" />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                      <div class="form-outline">
+                        <label class="form-label" for="typeText">Cvv</label>
+                        <input type="password" id="typeText" class="form-control form-control-lg"
+                          placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-dark btn-block btn-lg" (click)="success()">Buy now</button>
+
+                </form>
+
+              </div>
+              <div class="col-lg-2"></div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

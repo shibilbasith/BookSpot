@@ -1,0 +1,205 @@
+<!-- Empty Cart -->
+
+<!-- <div class="container" *ngIf="emsg">
+    <div class="row text-center">
+        <div class="col">
+            <img src="https://cdn.dribbble.com/users/436607/screenshots/8516786/cart___wheel_centrado_800x600px_2.gif"
+                alt="">
+            <h3 class="mt-3">Your Cart is Empty</h3>
+            <a href="/books/all-books" class="btn btn-outline-primary">Shop Now</a>
+        </div>
+    </div>
+</div> -->
+
+
+<section class="h-100 h-custom" *ngIf="emsg">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-12">
+                  <div class="p-5" >
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                      <!-- <h6 class="mb-0 text-muted">3 items</h6> -->
+                    </div>
+  
+                    <hr class="my-4">
+  
+                    <div class="row mb-4 d-flex justify-content-center align-items-center text-center">
+                        <img style="width: 30rem;" src="https://cdn.dribbble.com/users/436607/screenshots/8516786/cart___wheel_centrado_800x600px_2.gif"
+                        alt="">
+                    <h3 class="mt-3">Your Cart is Empty</h3>
+                      <hr class="my-4">
+                      
+                    </div>
+
+                    <div class="pt-5" routerLink="/books/all-books">
+                      <h6 class="mb-0"><a href="#!" class="text-body"><i
+                            class="fas fa-long-arrow-alt-left me-2" ></i>Back to shop</a></h6>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- cart -->
+
+
+<section class="h-100 h-custom" *ngIf="!emsg">
+    <div class="container py-5 h-100">
+      <div class="row d-flex  h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-12">
+                  <div class="p-5" >
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                      <!-- <h6 class="mb-0 text-muted">3 items</h6> -->
+                    </div>
+  
+                    <hr class="my-4">
+  
+                    <div class="row mb-4 d-flex justify-content-between align-items-center" *ngFor="let book of cart">
+                        <div class="col-md-1 col-lg-1 col-xl-1 text-end" >
+                            <a (click)="deletecart(book)" type='submit' class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                      <div class="col-md-2 col-lg-2 col-xl-2">
+                        <img
+                          [src]="book.image"
+                          class="img-fluid rounded-3" alt="Cotton T-shirt">
+                      </div>
+                      <div class="col-md-3 col-lg-3 col-xl-3">
+                        <h6 class="text-muted">Book</h6>
+                        <h6 class="text-black mb-0">{{book.title}}</h6>
+                      </div>
+                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+
+                        <h5 class="mb-0">{{book.price-40 | currency}}</h5>
+                        <del><h6 class="mb-0 text-secondary">{{book.price | currency}}</h6></del>
+                      </div>
+                      <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                        <button class="btn-cart" (click)="purchase(book)">
+                            <i class="fa-solid fa-money-check-dollar fa-2x"></i>
+                        </button>
+  
+                
+                      </div>
+                      <hr class="my-4">
+                      
+                    </div>
+
+                    <div class="pt-5" routerLink="/books/all-books">
+                      <h6 class="mb-0"><a href="#!" class="text-body"><i
+                            class="fas fa-long-arrow-alt-left me-2" ></i>Back to shop</a></h6>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- oldd -->
+
+<!-- <div class="container d-flex" *ngIf="!emsg">
+    <div class="row">
+        <div class="col">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Image </th>
+                        <th>Description</th>
+                        <th>Action</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody class="table border m-5" *ngFor="let book of cart">
+                    <tr>
+                        <td>{{book.id}}</td>
+                        <td>{{book.title}}</td>
+                        <td><img style="width: 100px; height: 100px;" [src]="book.image" alt=""></td>
+                        <td>{{book.description.slice(0,200)+'...'}}</td>
+                        <td><button (click)="deletecart(book)" class="btn btn-outline-danger mt-auto"><i
+                                    class="fa fa-trash"></i></button></td>
+                        <td class="price">{{ book.price | currency}}</td>
+                    </tr>
+
+                    <tr>
+                        <div class='form-row'>
+                            <div class='col-md-12 form-group'>
+                                <button (click)="purchase(book)" class='form-control btn btn-primary submit-button'
+                                    type='submit'>Purchase »</button>
+                            </div>
+                        </div>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <div style="float: right" class="mb-5">
+                <button class="btn btn-primary" routerLink="/books/all-books">Shop more</button> &nbsp;
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2222222222222 -->
+

@@ -1,0 +1,53 @@
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg nav-head">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" routerLink="">
+<h1 class="text-center bookspot">BookSpot.</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active text" aria-current="page" routerLink="books/Profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link active text ml-3" aria-current="page" routerLink="books/library">Library</a></li>
+                <!-- <li class="nav-item"><a class="nav-link active text ml-3" aria-current="page" routerLink="books/wish-list">Wishlist</a></li>                -->
+            
+                <!-- <li class="nav-item"><a routerLink="books/all-books" class="a"><input (keyup)="search($event)" type="text" placeholder="search.." class=" search"></a></li> -->
+
+                <div style="max-width:400px;margin:auto; border: 2px solid; position:absolute;right:25rem; border-radius: 4px; ">
+                    <div class="input-icons">
+                        <i class="fa-solid fa-magnifying-glass" style="margin: 10px;"></i>
+                        <!-- <input class="input-field" style="background: transparent; border: none; outline: none;" type="text"> -->
+                        <a routerLink="books/all-books" class="a"><input (keyup)="search($event)" type="text" placeholder="search.." class="input-field"></a>
+
+                    </div>
+              </div>
+              
+              
+
+                <!-- <button class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                <!-- <i class="fa fa-heart"></i> -->
+
+                </ul>
+                
+            <form class="d-flex">
+                <button disableRipple routerLink="books/cart" class="btn btn-outline-dark bg-dark cart " type="submit">
+                    <mat-icon 
+                        class="text-white d-flex"
+                        [matBadge]="cart" 
+                        [matBadgeHidden]="!cart" 
+                        matBadgeColor="warn"
+                        >shopping_cart</mat-icon>
+                    <!-- <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-white text-dark ms-1 rounded-pill">0</span> -->
+                </button>
+            </form>
+            <button routerLink="books/wish-list" class="  wish-btn  m-3">
+                <mat-icon 
+                    class=" d-flex ps-1"
+                    >favorite_border</mat-icon>
+            </button>
+        </div>
+    </div>
+    
+</nav>

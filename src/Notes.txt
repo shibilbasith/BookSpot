@@ -1,0 +1,60 @@
+     ---BOOKSPOT FRONTEND---
+
+1 create the BookSpot App - ng new bookspot
+2 create components 
+    - ng g c header
+    - ng g c footer
+
+3 add bootstrap, fontawsome, google fonts - in index.html
+
+4 lazy loding - Its a process of loading components and modules
+              - It improves application load time speed              
+ng g m books --route books --module app.module
+              - add <router-outlet> in app.compnt.html
+
+5 Create a components should lazy loaded in the products module 
+        ->books    -ng g c books/all-books
+                    ng g c books/cart
+                    ng g c books/wish-list
+                    ng g c books/library
+                    ng g c books/home
+
+6 add paths in books-router.module.ts
+  add default path redirect to books in app-routing.module.ts
+
+7 create page-not-found component to display when undifined path was type
+        -define its path in app-routing.module.ts
+
+8 add cards bootstrap in all-books components
+
+9 design(create table) cart page
+
+    ---API/BACKEND INTEGRATION---
+
+10 Create angular services for API calling
+    -ng g s books/api
+
+11 import HttpClientModule in books module
+
+12 dependency injection in api.service.ts and connect backend server link and get all books data
+
+13 call the function from api.service.ts and storing the data array in all-books.cmpnt.ts
+
+14 import BooksModule in app.module.ts
+
+    ---API/BACKEND INTEGRATION---
+
+15 Search for books (create pipes)
+    -ng g p books/pipes/filter
+
+
+
+
+
+
+
+
+    -------------------------------
+
+
+    1.when purchase click post to library

@@ -1,0 +1,26 @@
+1. Create Package.json - npm init
+2. Create nodemodules - Install express - npm i express
+3. Create index.js file
+4. import express inside the index.js
+5. using express create an app
+6. setup port number
+7. Use json parser for server application
+8. Install cors - npm i cors
+9. Import cors 
+10. Using cors specify origin to the server(integration)
+11. api fetch -fakestoreapi/products
+12. Create Db and collection in mongodb 
+13. Install mongoose to establish connection btw server and mongodb
+    npm i mongoose
+14. Create a folder - Services and create two files
+    db.js and dataService.js 
+15. In db.js - Import mongoose to establish connection
+16. define connection string
+17. Create Model and schema
+18. Export model
+19. import db in dataService, create a functiom and export it
+20. Resolving API request in index.js
+    index + dataService
+    Node + Mongodb connection successful...
+21. Final step
+    Api to get all products
