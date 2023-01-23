@@ -1,3 +1,11 @@
+# Preview Project
+
+
+![screenshot-localhost_4200-2023 01 23-16_46_34](https://user-images.githubusercontent.com/64234772/214070309-21377c56-ed34-4ad9-90c8-793021310c21.png)
+
+
+
+
 # BookSpot
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
