@@ -1,7 +1,8 @@
 # Preview Project
 
 
-![screenshot-localhost_4200-2023 01 23-16_46_34](https://user-images.githubusercontent.com/64234772/214070309-21377c56-ed34-4ad9-90c8-793021310c21.png)
+![home](https://user-images.githubusercontent.com/64234772/214352335-d6c3f978-d4ed-4b81-b051-f4445affc195.png)
+
 
 
 
