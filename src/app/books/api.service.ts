@@ -13,7 +13,7 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
   getAllBooks(){
-    return this.http.get('http://localhost:3000/all-books')  //books json data
+    return this.http.get('https://bookserver-rbqi.onrender.com/all-books')  //books json data
   }
 
 

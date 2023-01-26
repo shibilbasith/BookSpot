@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose')
 
+// const DB_URI = "mongodb+srv://shibil:re3srj9U9FZS52Fd@cluster0.u5aebd5.mongodb.net/library?retryWrites=true&w=majority"
 
 // define connection string
 
