@@ -18,7 +18,7 @@ export class ApiService {
   }
 
   getAllBooks(){
-    return this.http.get(`${this.domain}all-books`)  //books json data
+    return this.http.get(`${this.domain}/all-books`)  //books json data
   }
 
 
