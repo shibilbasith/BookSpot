@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  domain: 'http://localhost:3000'
+  domain: 'https://bookserver-rbqi.onrender.com/'
 
 };
