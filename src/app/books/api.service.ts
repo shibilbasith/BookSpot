@@ -1,19 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+
+  domain = environment.domain;
   
   searchkey = new BehaviorSubject('')
   //to share stream of data
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+  }
+
   getAllBooks(){
-    return this.http.get('https://bookserver-rbqi.onrender.com/all-books')  //books json data
+    return this.http.get(`${this.domain}/all-books`)  //books json data
   }
 
 
