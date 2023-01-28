@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  domain: 'https://bookserver-rbqi.onrender.com'
+  domain: 'http://localhost:4200'
 };
 
 /*
