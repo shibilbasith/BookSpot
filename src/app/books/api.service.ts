@@ -38,17 +38,17 @@ export class ApiService {
       read:book.read
     }
 
-    return this.http.post('http://localhost:3000/addtowishlist', body)
+    return this.http.post(`${this.domain}/addtowishlist`, body)
   }
 
   //get wishlist details
   getwishlist(){
-    return this.http.get('http://localhost:3000/getwishlist')  //books json data
+    return this.http.get(`${this.domain}/getwishlist`)  //books json data
   }
 
   //delete wishlist
   deletewish(id:any){
-    return this.http.delete('http://localhost:3000/deletewish/'+id)
+    return this.http.delete(`${this.domain}/deletewish/`+id)
   }
 
       //**CART**//
@@ -66,17 +66,17 @@ export class ApiService {
 
 
     }
-    return this.http.post('http://localhost:3000/addtocart', body)
+    return this.http.post(`${this.domain}/addtocart`, body)
   }
 
   //get cart details
   getcart(){
-    return this.http.get('http://localhost:3000/getcart')  //books json data
+    return this.http.get(`${this.domain}/getcart`)  //books json data
   }
 
   //delete wishlist
   deletecart(id:any){
-    return this.http.delete('http://localhost:3000/deletecart/'+id)
+    return this.http.delete(`${this.domain}/deletecart/`+id)
   }
 
 
@@ -94,27 +94,27 @@ export class ApiService {
       download:book.download,
       read:book.read
     }
-    return this.http.post('http://localhost:3000/addtolibrary', body)
+    return this.http.post(`${this.domain}/addtolibrary`, body)
   }
 
 
   //get library details
   getlibrary(){
-    return this.http.get('http://localhost:3000/getlibrary')  //books json data
+    return this.http.get(`${this.domain}/getlibrary`)  //books json data
   }
 
 
   //get all featured books
 
   getFeatured(){
-    return this.http.get('http://localhost:3000/featured-books')  //books json data
+    return this.http.get(`${this.domain}/featured-books`)  //books json data
   }
 
 
   //get all popular books
 
   getPopular(){
-    return this.http.get('http://localhost:3000/popular-books')  //books json data
+    return this.http.get(`${this.domain}/popular-books`)  //books json data
   }
 
 
