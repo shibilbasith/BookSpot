@@ -1,4 +1,4 @@
-# Preview Project
+# BookSpot Preview
 
 
 ![home](https://user-images.githubusercontent.com/64234772/214352335-d6c3f978-d4ed-4b81-b051-f4445affc195.png)
